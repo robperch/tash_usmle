@@ -33,9 +33,6 @@ package_dir = os.path.dirname(os.path.dirname(__file__))
 ## Local credentials
 creds_file_path = os.path.join(package_dir, "config", "local", "credentials.yaml")
 
-## Local videos path
-videos_path = os.path.join("~/Desktop/USMLE STEP 1")
-
 
 
 "----------------------------------------------------------------------------------------------------------------------"
@@ -46,7 +43,7 @@ videos_path = os.path.join("~/Desktop/USMLE STEP 1")
 "-------------- Data files base path --------------"
 
 ## Data base file location
-# data_dir_path = os.path.join(package_dir, "data")
+data_dir_path = os.path.join(package_dir, "data")
 
 
 
