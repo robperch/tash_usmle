@@ -2,6 +2,12 @@
 
 
 ## Imports
+from .learning_time_params import (
+
+    duration_test_path,
+    test_dict_dir,
+
+)
 
 
 
