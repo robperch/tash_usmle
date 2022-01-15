@@ -45,6 +45,9 @@ creds_file_path = os.path.join(package_dir, "config", "local", "credentials.yaml
 ## Data base file location
 data_dir_path = os.path.join(package_dir, "data")
 
+## Local videos source file
+usmle_2020_videos_path = "/Users/rp_mbp/Desktop/USMLE STEP 1/Kaplan USMLE Step 1 Videos 2020"
+
 
 
 
