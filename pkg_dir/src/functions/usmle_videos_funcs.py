@@ -18,6 +18,7 @@ import pandas as pd
 
 "--- Local application imports ---"
 from pkg_dir.config import *
+from pkg_dir.src.parameters import *
 
 
 
@@ -72,6 +73,25 @@ def video_data_to_df(videos_entries, save_csv):
 
     ## Generating dataframe from tuples
     dfx = pd.DataFrame(videos_entries)
+
+    ## Assigning the df's column names based
+    dfx.columns = videos_df_colnames
+
+    ## Rounding the length values (mins)
+    dfx["video_length_[mins]"] = round(dfx["video_length_[mins]"], 2)
+
+    ## Adding column with the video length time in hours
+    dfx["video_length_[hrs]"] = round(dfx["video_length_[mins]"]/60, 2)
+
+    ## Sorting values
+    dfx.sort_values(by=["topic", "subtopic", "video"], inplace=True)
+    
+    ## Restarting index
+    dfx.reset_index(inplace=True, drop=True)
+
+    ## Saving a local copy of the df
+    if save_csv:
+        dfx.to_csv(usmle_videos_csv_copy_path + usmle_2020_videos_df_filename)
 
 
     return dfx
