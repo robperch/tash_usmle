@@ -6,8 +6,12 @@ from .config import (
 
     package_dir,
     creds_file_path,
+
     data_dir_path,
     usmle_2020_videos_path,
+
+    usmle_videos_csv_copy_path,
+    usmle_2020_videos_df_filename,
 
 )
 
