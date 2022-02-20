@@ -9,6 +9,12 @@ from .learning_time_params import (
 
 )
 
+from .usmle_videos_params import (
+
+    videos_df_colnames,
+
+)
+
 
 
 
